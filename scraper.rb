@@ -40,7 +40,7 @@ def scrape_list(url)
 
     data = { 
       id: mp_url.to_s[/(\d+).html$/, 1],
-      name: box.css('h1').text.tidy,
+      name: box.css('h1').text.tidy.sub(/\s*\([^\)]+\)/,''),
       other_name: box.xpath('.//td[contains(.,"Naam")]/following-sibling::td').text.tidy,
       party: party,
       party_id: party_id,
