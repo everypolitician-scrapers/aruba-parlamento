@@ -30,7 +30,6 @@ def scrape_list(url)
   noko = noko_for(url)
   noko.css('.carousel-feature a/@href').map(&:text).each do |link|
     mp_url = URI.join url, link
-    puts mp_url
     mp = noko_for(mp_url)
 
     box = mp.css('#content_left')
@@ -44,7 +43,7 @@ def scrape_list(url)
       other_name: box.xpath('.//td[contains(.,"Naam")]/following-sibling::td').text.tidy,
       party: party,
       party_id: party_id,
-      email: box.xpath('.//td[contains(.,"Email")]/following-sibling::td/a/@href').text.sub('mailto:',''),
+      email: box.xpath('.//td[contains(.,"Email")]/following-sibling::td/a/@href').map(&:text).join(';').gsub('mailto:',''),
       phone: box.xpath('.//td[contains(.,"Telefoon")]/following-sibling::td').text.tidy,
       fax: box.xpath('.//td[contains(.,"Fax")]/following-sibling::td').text.tidy,
       facebook: box.xpath('.//td[contains(.,"Facebook")]/following-sibling::td/a/@href').text,
