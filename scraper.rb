@@ -35,9 +35,9 @@ def scrape_list(url)
     box = mp.css('#content_left')
 
     faction = box.xpath('.//td[contains(.,"Fractie")]/following-sibling::td').text.tidy
-    party, party_id = faction.match(/(.*) \((.*)\)/).captures
+    party, party_id = faction.match(/(.*) \((.*)\)/).captures unless faction.to_s.empty?
 
-    data = { 
+    data = {
       id: mp_url.to_s[/(\d+).html$/, 1],
       name: box.css('h1').text.tidy.sub(/\s*\([^\)]+\)/,''),
       other_name: box.xpath('.//td[contains(.,"Naam")]/following-sibling::td').text.tidy,
