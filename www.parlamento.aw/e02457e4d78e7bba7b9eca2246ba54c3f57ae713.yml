@@ -18,7 +18,7 @@ response:
     message: OK
   headers:
     Set-Cookie:
-    - PHPSESSID=fd1bcb8560086b5695ceb6ceae1fe7a4; path=/; HttpOnly
+    - PHPSESSID=d3a81736994d4d1d79221c5eb59ff011; path=/; HttpOnly
     Expires:
     - Thu, 19 Nov 1981 08:52:00 GMT
     Cache-Control:
@@ -32,7 +32,7 @@ response:
     Accept-Ranges:
     - bytes
     Date:
-    - Wed, 26 Oct 2016 17:57:04 GMT
+    - Thu, 27 Oct 2016 14:18:50 GMT
     Age:
     - '0'
     Connection:
@@ -40,4 +40,4 @@ response:
   body:
     encoding: UTF-8
   http_version: 
-recorded_at: Wed, 26 Oct 2016 17:57:04 GMT
+recorded_at: Thu, 27 Oct 2016 14:18:51 GMT
