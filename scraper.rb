@@ -60,12 +60,4 @@ def scrape_list(url)
   end
 end
 
-term = {
-  id: '7',
-  name: '7th Aruban Estates',
-  start_date: '2013',
-  source: 'https://en.wikipedia.org/wiki/Estates_of_Aruba',
-}
-ScraperWiki.save_sqlite([:id], term, 'terms')
-
 scrape_list('http://www.parlamento.aw/internet/leden_226/')
