@@ -2,21 +2,13 @@
 # encoding: utf-8
 # frozen_string_literal: true
 
-require 'csv'
-require 'nokogiri'
-require 'open-uri'
 require 'pry'
+require 'scraped'
 require 'scraperwiki'
 
 # require 'open-uri/cached'
 # OpenURI::Cache.cache_path = '.cache'
 require 'scraped_page_archive/open-uri'
-
-class String
-  def tidy
-    gsub(/[[:space:]]+/, ' ').strip
-  end
-end
 
 def dob(text)
   return if text.to_s.empty?
