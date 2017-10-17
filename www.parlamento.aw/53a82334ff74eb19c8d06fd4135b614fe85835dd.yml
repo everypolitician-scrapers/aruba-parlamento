@@ -17,8 +17,10 @@ response:
     code: 200
     message: OK
   headers:
+    Date:
+    - Tue, 17 Oct 2017 01:28:50 GMT
     Set-Cookie:
-    - PHPSESSID=d40b48419d26c4f8ad2fd2d730e9f6f0; path=/; HttpOnly
+    - PHPSESSID=8b48456137fe102814b74107540cdb33; path=/; HttpOnly
     Expires:
     - Thu, 19 Nov 1981 08:52:00 GMT
     Cache-Control:
@@ -27,17 +29,15 @@ response:
     - no-cache
     Content-Type:
     - text/html; charset=utf-8
-    Content-Length:
-    - '24496'
-    Accept-Ranges:
-    - bytes
-    Date:
-    - Sun, 15 Oct 2017 23:59:35 GMT
     Age:
     - '0'
+    Accept-Ranges:
+    - bytes
+    Transfer-Encoding:
+    - chunked
     Connection:
     - keep-alive
   body:
     encoding: UTF-8
   http_version: 
-recorded_at: Sun, 15 Oct 2017 23:59:35 GMT
+recorded_at: Tue, 17 Oct 2017 01:28:50 GMT
