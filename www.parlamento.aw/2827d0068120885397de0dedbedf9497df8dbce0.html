@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="/templates/css/style_internet.css" type="text/css" media="screen">
 <script type="text/javascript" src="/simcore/js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="/simsite/js/wr/external_links_converter.js"></script>
-<script type="text/javascript">var SIM = {version: "2017.05.08"}; SIM.config = {"simSiteDomainRoot":""};</script>
+<script type="text/javascript">var SIM = {version: "2018.01.00"}; SIM.config = {"simSiteDomainRoot":""};</script>
 
 <link rel="stylesheet" type="text/css" href="/templates/css/style_ppp.php" media="">
 <link rel="stylesheet" type="text/css" href="/simsite/css/element_solr.css" media="screen">
@@ -31,7 +31,6 @@
     <script type="text/javascript">
 var search_suggestion_url = "search_suggestion";
 </script>
-    <script type="text/javascript" src="/simsite/js/elements/searchbox_solr.js"></script>
     <script type="text/javascript" src="/templates/js/featureCarousel.js"></script>
     <script type="text/javascript" src="/templates/js/jquery.featureCarousel.min.js"></script>
     <script type="text/javascript" src="/templates/js/functions.js"></script>
@@ -122,7 +121,7 @@ var search_suggestion_url = "search_suggestion";
 <form name="solr_searchbox_form" method="get" action="/internet/zoeken_3399/">
     <div class="hidden">
         <input type="hidden" name="domainroot" value="">
-    </div>
+            </div>
     <fieldset>
         <legend>Zoeken</legend>
         <label for="search_trefwoord"></label>
@@ -414,6 +413,9 @@ var search_suggestion_url = "search_suggestion";
             _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
             _paq.push(["setCookieDomain", "*.parlamento.aw"]);
             _paq.push(["setDomains", ['*.parlamento.aw']]);
+            if (typeof solr_no_results !== 'undefined') {
+                _paq.push(['setCustomUrl', document.URL + '&search_count=' + solr_no_results]);
+            }
             _paq.push(["trackPageView"]);
             _paq.push(["enableLinkTracking"]);
             _paq.push(['enableHeartBeatTimer', 30]);
