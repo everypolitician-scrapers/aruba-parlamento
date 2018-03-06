@@ -26,7 +26,7 @@
 <link rel="stylesheet" href="/simcore/css/jquery.fancybox-1.3.2.css" type="text/css" media="screen">
 <script type="text/javascript" src="/simcore/js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="/simsite/js/wr/external_links_converter.js"></script>
-<script type="text/javascript">var SIM = {version: "2017.05.08"}; SIM.config = {"simSiteDomainRoot":""};</script>
+<script type="text/javascript">var SIM = {version: "2018.01.00"}; SIM.config = {"simSiteDomainRoot":""};</script>
 <script type="text/javascript" src="/simcore/js/jquery.fancybox-1.2.1-slideshow.js"></script>
 <script type="text/javascript" src="/simcore/js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="/simsite/js/wr/image_thumbnail.js"></script>
@@ -39,6 +39,7 @@
     <script type="text/javascript">
 var search_suggestion_url = "search_suggestion";
 </script>
+    <script type="text/javascript" src="/simsite/js/elements/searchbox_solr.js"></script>
     <script type="text/javascript" src="/templates/js/functions.js"></script>
     <script type="text/javascript" src="/templates/js/jquery.cycle.all.min.js"></script>
     <script type="text/javascript" src="/templates/js/carrousel.js"></script>
@@ -73,7 +74,7 @@ var search_suggestion_url = "search_suggestion";
 <form name="solr_searchbox_form" method="get" action="/internet/zoeken_3399/">
     <div class="hidden">
         <input type="hidden" name="domainroot" value="">
-    </div>
+            </div>
     <fieldset>
         <legend>Zoeken</legend>
         <label for="search_trefwoord"></label>
@@ -365,6 +366,9 @@ var search_suggestion_url = "search_suggestion";
             _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
             _paq.push(["setCookieDomain", "*.parlamento.aw"]);
             _paq.push(["setDomains", ['*.parlamento.aw']]);
+            if (typeof solr_no_results !== 'undefined') {
+                _paq.push(['setCustomUrl', document.URL + '&search_count=' + solr_no_results]);
+            }
             _paq.push(["trackPageView"]);
             _paq.push(["enableLinkTracking"]);
             _paq.push(['enableHeartBeatTimer', 30]);
