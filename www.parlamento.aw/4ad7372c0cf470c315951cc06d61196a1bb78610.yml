@@ -18,9 +18,9 @@ response:
     message: OK
   headers:
     Date:
-    - Sun, 22 Apr 2018 17:35:40 GMT
+    - Mon, 23 Apr 2018 19:50:48 GMT
     Set-Cookie:
-    - PHPSESSID=c7d07ec3eda89ea1208db44d08ae2686; path=/; HttpOnly
+    - PHPSESSID=ecaa7d772e05ee2da2eaa41a371d000b; path=/; HttpOnly
     Expires:
     - Thu, 19 Nov 1981 08:52:00 GMT
     Cache-Control:
@@ -40,4 +40,4 @@ response:
   body:
     encoding: UTF-8
   http_version: 
-recorded_at: Sun, 22 Apr 2018 17:35:41 GMT
+recorded_at: Mon, 23 Apr 2018 19:50:49 GMT
