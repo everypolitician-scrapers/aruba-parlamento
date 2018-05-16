@@ -18,9 +18,11 @@ response:
     message: OK
   headers:
     Date:
-    - Tue, 15 May 2018 09:12:56 GMT
+    - Wed, 16 May 2018 23:09:59 GMT
+    Server:
+    - Apache
     Set-Cookie:
-    - PHPSESSID=cd827db91d770ada0c13d8fa3f3b1e00; path=/; HttpOnly
+    - PHPSESSID=73834acf1e158b76bb9adf5e5b2d33c4; path=/; HttpOnly
     Expires:
     - Thu, 19 Nov 1981 08:52:00 GMT
     Cache-Control:
@@ -29,15 +31,9 @@ response:
     - no-cache
     Content-Type:
     - text/html; charset=utf-8
-    Age:
-    - '0'
-    Accept-Ranges:
-    - bytes
-    Connection:
-    - keep-alive
     Content-Length:
     - '24989'
   body:
     encoding: UTF-8
   http_version: 
-recorded_at: Tue, 15 May 2018 09:12:57 GMT
+recorded_at: Wed, 16 May 2018 23:10:00 GMT
