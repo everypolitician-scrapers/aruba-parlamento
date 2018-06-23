@@ -18,11 +18,11 @@ response:
     message: OK
   headers:
     Date:
-    - Fri, 22 Jun 2018 05:18:44 GMT
+    - Sat, 23 Jun 2018 00:34:25 GMT
     Server:
     - Apache
     Set-Cookie:
-    - PHPSESSID=98fd4afe498516747a831e59c1b8ad96; path=/; HttpOnly
+    - PHPSESSID=a0116b446ca45cd9e71211d4b4b87e84; path=/; HttpOnly
     Expires:
     - Thu, 19 Nov 1981 08:52:00 GMT
     Cache-Control:
@@ -36,4 +36,4 @@ response:
   body:
     encoding: UTF-8
   http_version: 
-recorded_at: Fri, 22 Jun 2018 05:18:44 GMT
+recorded_at: Sat, 23 Jun 2018 00:34:25 GMT
