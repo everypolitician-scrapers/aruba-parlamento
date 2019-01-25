@@ -20,7 +20,7 @@ end
 
 def scrape_list(url)
   noko = noko_for(url)
-  noko.css('.carousel-feature a/@href').map(&:text).each do |link|
+  noko.css('#content_left td a/@href').map(&:text).each do |link|
     mp_url = URI.join url, link
     mp = noko_for(mp_url)
 
@@ -53,4 +53,4 @@ def scrape_list(url)
 end
 
 ScraperWiki.sqliteexecute('DELETE FROM data') rescue nil
-scrape_list('http://www.parlamento.aw/internet/leden_226/')
+scrape_list('https://www.parlamento.aw/internet/leden_226/')
