@@ -36,8 +36,6 @@ def scrape_list(url)
       party:      party,
       party_id:   party_id,
       email:      box.xpath('.//td[contains(.,"Email")]/following-sibling::td/a/@href').map(&:text).join(';').gsub('mailto:', ''),
-      phone:      box.xpath('.//td[contains(.,"Telefoon")]/following-sibling::td').text.tidy,
-      fax:        box.xpath('.//td[contains(.,"Fax")]/following-sibling::td').text.tidy,
       facebook:   box.xpath('.//td[contains(.,"Facebook")]/following-sibling::td/a/@href').map(&:text).join(';'),
       twitter:    box.xpath('.//td[contains(.,"Twitter")]/following-sibling::td/a/@href').map(&:text).join(';'),
       linkedin:   box.xpath('.//td[contains(.,"Linkedin")]/following-sibling::td/a/@href').text,
